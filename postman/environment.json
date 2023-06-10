@@ -1,0 +1,27 @@
+{
+	"id": "6af7913f-8e5d-43a9-a916-6170322d919d",
+	"name": "Laravel",
+	"values": [
+		{
+			"key": "url_base",
+			"value": "http://127.0.0.1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "url_domain",
+			"value": "http://flutterlaravel.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "url_mock",
+			"value": "https://7eb6b727-2afe-411f-aa00-75c26fe10337.mock.pstmn.io",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-06-12T13:40:04.804Z",
+	"_postman_exported_using": "Postman/10.14.9"
+}

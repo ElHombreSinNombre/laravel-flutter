@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "04b7dad5-f687-43e6-9926-6ada7c08551e",
+		"name": "Laravel Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2335085"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_domain}}/user/login",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url_mock}}/user/login",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\":\"Access granted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url_domain}}/users/all",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_mock}}/users/all",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\":\"{{$guid}}\",\n        \"name\": \"{{$randomFirstName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"password\": \"{{$randomPassword}}\",\n        \"language\": \"{{$randomLocale}}\",\n        \"city\": \"{{$randomCity}}\",\n        \"latitude\": \"{{$randomLatitude}}\",\n        \"longitude\": \"{{$randomLongitude}}\"\n    },\n    {\n        \"id\":\"{{$guid}}\",\n        \"name\": \"{{$randomFirstName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"password\": \"{{$randomPassword}}\",\n        \"language\": \"{{$randomLocale}}\",\n        \"city\": \"{{$randomCity}}\",\n        \"latitude\": \"{{$randomLatitude}}\",\n        \"longitude\": \"{{$randomLongitude}}\"\n    },\n    {\n        \"id\":\"{{$guid}}\",\n        \"name\": \"{{$randomFirstName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"password\": \"{{$randomPassword}}\",\n        \"language\": \"{{$randomLocale}}\",\n        \"city\": \"{{$randomCity}}\",\n        \"latitude\": \"{{$randomLatitude}}\",\n        \"longitude\": \"{{$randomLongitude}}\"\n    },\n    {\n        \"id\":\"{{$guid}}\",\n        \"name\": \"{{$randomFirstName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"password\": \"{{$randomPassword}}\",\n        \"language\": \"{{$randomLocale}}\",\n        \"city\": \"{{$randomCity}}\",\n        \"latitude\": \"{{$randomLatitude}}\",\n        \"longitude\": \"{{$randomLongitude}}\"\n    },\n    {\n        \"id\":\"{{$guid}}\",\n        \"name\": \"{{$randomFirstName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"password\": \"{{$randomPassword}}\",\n        \"language\": \"{{$randomLocale}}\",\n        \"city\": \"{{$randomCity}}\",\n        \"latitude\": \"{{$randomLatitude}}\",\n        \"longitude\": \"{{$randomLongitude}}\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomNumber = Math.floor(Math.random() * 2);\r",
+							"var language = randomNumber === 0 ? 'en' : 'es';\r",
+							"pm.collectionVariables.set('language', language);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{$randomFirstName}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{$randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{$randomPassword}}",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "{{language}}",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "{{$randomCity}}",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "{{$randomLatitude}}",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "{{$randomLongitude}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_domain}}/users/create",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "{{$guid}}",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "{{$randomFirstName}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{$randomEmail}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{$randomPassword}}",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "{{$randomLocale}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{$randomCity}}",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "{{$randomLongitude}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_mock}}/users/create",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"message\":\"User created\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: pm.variables.get(\"url_domain\") + \"/users/all\",\r",
+							"    method: 'GET',\r",
+							"    headers: {\r",
+							"        'Accept': 'application/json',\r",
+							"        'X-XSRF-TOKEN': pm.collectionVariables.get(\"X-XSRF-TOKEN\")\r",
+							"    }\r",
+							"}, function (error, response) {\r",
+							"    if (error) {\r",
+							"        console.error(error);\r",
+							"        return;\r",
+							"    }\r",
+							"    const responseJson = response.json();\r",
+							"    pm.collectionVariables.set(\"createdUserId\", _.last(responseJson).id);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url_domain}}/users/edit/:id",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"users",
+						"edit",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{createdUserId}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_mock}}/users/edit/:id",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"users",
+								"edit",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{$firstId}}"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"id\":\"{{$guid}}\",\r\n    \"name\": \"{{$randomFirstName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"language\": \"{{$randomLocale}}\",\r\n    \"city\": \"{{$randomCity}}\",\r\n    \"latitude\": \"{{$randomLatitude}}\",\r\n    \"longitude\": \"{{$randomLongitude}}\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomNumber = Math.floor(Math.random() * 2);\r",
+							"var language = randomNumber === 0 ? 'en' : 'es';\r",
+							"pm.collectionVariables.set('language', language);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{$randomFirstName}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{$randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{$randomPassword}}",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "{{language}}",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "{{$randomCity}}",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "{{$randomLatitude}}",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "{{$randomLongitude}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_domain}}/users/update/:id",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"users",
+						"update",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{createdUserId}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit user",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "{{$randomFirstName}}",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "{{$randomEmail}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{$randomPassword}}",
+									"type": "text"
+								},
+								{
+									"key": "locale",
+									"value": "{{$randomLocale}}",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "{{$randomCity}}",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "{{$randomLatitude}}",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "{{$randomLongitude}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_mock}}/users/update/:id",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"users",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{$createdUserId}}"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"message\":\"User updated\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url_domain}}/users/delete/:id",
+					"host": [
+						"{{url_domain}}"
+					],
+					"path": [
+						"users",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{createdUserId}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete user",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_mock}}/users/delete/:id",
+							"host": [
+								"{{url_mock}}"
+							],
+							"path": [
+								"users",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{$createdUserId}}"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"message\":\"User deleted\"\r\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "createdUserId",
+			"value": ""
+		},
+		{
+			"key": "language",
+			"value": ""
+		}
+	]
+}
