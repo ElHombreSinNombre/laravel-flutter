@@ -40,7 +40,7 @@ In
 
 > /flutter/android/app/src/main/AndroidManifest.xml
 
-change _android:value="API"_ for you **Google Maps** API key.
+change _android:value="API_KEY"_ for you **Google Maps** API key.
 
 To get a key you must to go to **[Google Cloud Platform](https://console.cloud.google.com/)** and create project. Then follow [this](https://developers.google.com/maps/documentation/javascript/get-api-key) guide.
 
