@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Str;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
+            'id' => Str::uuid(),
             'name' => 'Admin',
             'email' => 'flutterlaravel@test.com',
             'password' => app('hash')->make('test'),
