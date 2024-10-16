@@ -30,7 +30,7 @@ After all we can edit _etc/host_ file to use a domain name.
 
 ![Host](resources/host.jpg)
 
-We can access to the web in localhost (127.0.0.1) or in flutterlaravel.com.
+We can access the web in localhost (127.0.0.1) or flutterlaravel.com.
 
 ### Frontend
 
@@ -42,7 +42,7 @@ In
 
 change _android:value="API_KEY"_ for you **Google Maps** API key.
 
-To get a key you must to go to **[Google Cloud Platform](https://console.cloud.google.com/)** and create project. Then follow [this](https://developers.google.com/maps/documentation/javascript/get-api-key) guide.
+To get a key you must go to **[Google Cloud Platform](https://console.cloud.google.com/)** and create a project. Then follow [this](https://developers.google.com/maps/documentation/javascript/get-api-key) guide.
 
 Finally run
 
