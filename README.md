@@ -2,7 +2,7 @@
 
 Install **[Flutter](https://flutter.dev/)**, **[PHP](https://www.php.net/downloads)**, **[Composer](https://getcomposer.org/)**, **[Node](https://nodejs.org/es/)** and **[Docker Desktop](https://docker.com/products/docker-desktop/)**.
 
-In _laravel_ folder we must to copy-paste _env.example_ and rename new file as _.env_. In this file we must to set your database connections.
+In _laravel_ folder we must copy-paste _env.example_ and rename new file as _.env_. In this file we must set your database connections.
 
 Default connection in _.env_ file for this project.
 
@@ -21,7 +21,7 @@ With _CMD_ launch this commands
     npm install
     php artisan key:generate
 
-Open **Docker Desktop**, then with _CMD_ launch this commands
+Open **Docker Desktop**, then with _CMD_ launch these commands
 
     cd docker
     docker-compose up -d
