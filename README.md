@@ -14,7 +14,7 @@ Default connection in _.env_ file for this project.
     DB_PASSWORD=secret
     APP_KEY=
 
-With _CMD_ launch this commands
+With _CMD_ launch these commands
 
     cd laravel
     composer install
