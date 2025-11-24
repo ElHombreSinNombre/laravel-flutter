@@ -1,5 +1,7 @@
 ## Flutter Map
 
+This project is a **Flutter** mobile frontend integrated with a **Laravel (PHP)** backend and Google Map API
+
 ## Technologies
 
 - **[Flutter](https://flutter.dev/)**
@@ -12,6 +14,7 @@
 
 Inside _laravel_ folder rename  _env.example_  to _.env_. In this file, we must set your database connections.
 
+```env
     DB_CONNECTION=mysql
     DB_HOST=mariadb
     DB_PORT=3306
@@ -19,6 +22,7 @@ Inside _laravel_ folder rename  _env.example_  to _.env_. In this file, we must 
     DB_USERNAME=root
     DB_PASSWORD=secret
     APP_KEY=
+```
 
 Move to the _laravel_ folder and run the following commands in the terminal:
 
@@ -47,11 +51,7 @@ You can edit your **/etc/hosts** file to use a custom domain name.
 
 We can access the web in localhost (127.0.0.1) or flutterlaravel.com.
 
-In
-
-    /flutter/android/app/src/main/AndroidManifest.xml
-
-replace _android:value="API_KEY"_ for you **Google Maps** API key.
+In `flutter/android/app/src/main/AndroidManifest.xml` replace `android:value="API_KEY"` with your **Google Maps** API key
 
 To obtain a key, go to **[Google Cloud Platform](https://console.cloud.google.com/)** and create a project and follow [this](https://developers.google.com/maps/documentation/javascript/get-api-key) guide.
 
@@ -64,5 +64,5 @@ Move to flutter folder and launch this commands in terminal
 Can access to **phpMyAdmin** in *localhost:8000*
 
 > [!NOTE]
-> Name: root
-> Password: secret
+> Name: **root*. Password: **secret**
+
