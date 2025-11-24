@@ -33,7 +33,7 @@ Move to the _laravel_ folder and run the following commands in the terminal:
     php artisan migrate:fresh --seed
  ```
 
-Move to _docker_ folder and run
+Move to _docker_ folder and run:
 
 ```bash
     docker-compose up -d
@@ -49,20 +49,21 @@ You can edit your **/etc/hosts** file to use a custom domain name.
 
 ![Host](resources/host.jpg)
 
-We can access the web in localhost (127.0.0.1) or flutterlaravel.com.
+We can access the web in *localhost (127.0.0.1)* or *flutterlaravel.com*.
 
-In `flutter/android/app/src/main/AndroidManifest.xml` replace `android:value="API_KEY"` with your **Google Maps** API key
+In `flutter/android/app/src/main/AndroidManifest.xml` replace `android:value="API_KEY"` with your **Google Maps** API key.
 
 To obtain a key, go to **[Google Cloud Platform](https://console.cloud.google.com/)** and create a project and follow [this](https://developers.google.com/maps/documentation/javascript/get-api-key) guide.
 
-Move to flutter folder and launch this commands in terminal
+Move to flutter folder and launch this commands in terminal.
 
 ```bash
     flutter run
 ```
 
-Can access to **phpMyAdmin** in *localhost:8000*
+Can access to **phpMyAdmin** in *localhost:8000*.
 
 > [!NOTE]
-> Name: **root*. Password: **secret**
+> Name: **root**. Password: **secret**
+
 
