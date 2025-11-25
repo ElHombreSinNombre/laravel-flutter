@@ -36,13 +36,7 @@ Move to the _laravel_ folder and run the following commands in the terminal:
 Move to _docker_ folder and run:
 
 ```bash
-    docker-compose up -d
- ```
-
-After that, go back to the _laravel_ folder and run:
-
-```bash
-    php artisan migrate:fresh --seed
+    docker compose up -d --build
  ```
 
 You can edit your **/etc/hosts** file to use a custom domain name.
@@ -65,5 +59,6 @@ Can access to **phpMyAdmin** in *localhost:8000*.
 
 > [!NOTE]
 > Name: **root**. Password: **secret**
+
 
 
